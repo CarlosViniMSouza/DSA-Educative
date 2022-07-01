@@ -1,4 +1,4 @@
 git add -A 
-git commit -m "now: Resolve the problem with function reverse!"
+git commit -m "now: functin reserveKElements -> resolved!"
 git push
 git status

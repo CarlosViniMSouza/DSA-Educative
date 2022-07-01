@@ -23,20 +23,20 @@ class Dequeue:
                 return f"Element Found: {newData}"
             return "Element Not Found"
 
-    def reverseKElements(self, newData: int):
+    def reverseKElements(self, newData):
         # ex.: 1, 2, 3, 4, 5, 6, 7 (reverse 4 numbers):
         # res.: 4, 3, 2, 1, 5, 6, 7 (concluded)
         listrev = deque()
 
-        for i in range(self.data[0], self.data[newData]):
+        for i in range(0, newData):
             listrev.append(self.data[i])
             i += 1
 
-        for j in range(self.data[0], self.data[newData]):
+        for j in range(0, newData):
             self.data.popleft()
             j += 1
 
-        # listrev.reverse()
+        listrev.reverse()
 
         print("New List:", listrev + self.data)
 
