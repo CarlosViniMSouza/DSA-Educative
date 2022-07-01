@@ -1,22 +1,24 @@
 from collections import deque
 
-# Initializing a queue
-q = deque()
 
-# Adding elements to a queue
-q.append('a')
-q.append('b')
-q.append('c')
+class Dequeue:
+    def __init__(self) -> None:
+        self.data = deque()
 
-print("Initial queue")
-print(q)
+    def addElement(self, newData) -> None:
+        pass
 
-# Removing elements from a queue
-print("\nElements dequeued from the queue")
-print(q.popleft())
-print(q.popleft())
-print(q.popleft())
+    def addElementLeft(self, newData) -> None:
+        pass
 
-print("\nQueue after removing elements")
-print(q)
-# output> deque([ ])
+    def removeElement(self) -> float:
+        pass
+
+    def removeElementRigth(self, newData) -> float:
+        pass
+
+    def searchElement(self) -> float:
+        pass
+
+    def reverseKElements(self):
+        pass

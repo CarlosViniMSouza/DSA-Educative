@@ -1,4 +1,4 @@
 git add -A 
-git commit -m "next step: Stack"
+git commit -m "now? class & functions of Queue -> added"
 git push
 git status
