@@ -44,6 +44,17 @@ class structList:
             prod *= j
         print(f"\nElements List02(Product): {prod}")
 
+    def searchElement(self, newData):
+        for i in self.listTest01:
+            if newData == i:
+                print("\nElement founded in list01")
+
+        for j in self.listTest02:
+            if newData == j:
+                print("\nElement founded in list02")
+
+        return "\nElement Not founded on lists"
+
 
 studyList = structList()
 
@@ -76,3 +87,6 @@ studyList.maxSumSublist()
 
 # Product all elements of lists:
 studyList.productAllElements()
+
+# Search Elements:
+studyList.searchElement(0)

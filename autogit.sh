@@ -1,4 +1,4 @@
 git add -A 
-git commit -m "next step: build others functions in lists"
+git commit -m "now: searchElement"
 git push
 git status
