@@ -1,4 +1,4 @@
-class estructList:
+class structList:
     def __init__(self):
         self.listTest01 = list()
         self.listTest02 = list()
@@ -29,36 +29,50 @@ class estructList:
         print(f"\nMinimun Value of List02: {min(self.listTest02)}")
 
     def maxSumSublist(self):
-        print(f"\nSummation: {sum(self.listTest01)} + {sum(self.listTest02)}")
+        print("\nSummation:", sum(self.listTest01) + sum(self.listTest02))
 
     def productAllElements(self):
         prod = 1
 
         for i in self.listTest01:
-            prod *= self.listTest01[i]
-        print(f"Elements List01(Product): {prod}")
+            prod *= i
+        print(f"\nElements List01(Product): {prod}")
 
         prod = 1  # return 'prod' to state 1
 
         for j in self.listTest02:
-            prod *= self.listTest01[j]
-        print(f"Elements List01(Product): {prod}")
+            prod *= j
+        print(f"\nElements List02(Product): {prod}")
 
 
-studyList = estructList()
+studyList = structList()
 
 # Creating list01:
+studyList.addNumbersList01(4)
+studyList.addNumbersList01(6)
+studyList.addNumbersList01(8)
+studyList.addNumbersList01(10)
 
 # Creating list02:
+studyList.addNumbersList02(3)
+studyList.addNumbersList02(5)
+studyList.addNumbersList02(7)
+studyList.addNumbersList02(9)
 
 # Removing 1 element to list01:
+studyList.removeNumsList01(1)
 
 # Removing 1 element to list02:
+studyList.removeNumsList02(1)
 
 # Merge the 2 lists:
+studyList.mergeTwoLists()
 
 # Find Minimun Value of lists:
+studyList.findMinValue()
 
 # Maximun Sum Sublists:
+studyList.maxSumSublist()
 
 # Product all elements of lists:
+studyList.productAllElements()
