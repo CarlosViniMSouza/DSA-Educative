@@ -30,12 +30,24 @@ Car Model: Honda
 """
 ```
 
+## Applications:
+
+1 - Shared storage of related values or objects, i.e. myDogs;
+
+2 - Data collections you’ll loop through;
+
+3 - Collections of data structures, such as a list of tuples;
+
 ## Common Operations:
 
 1 - Remove even integers from list;
+
 2 - Merge two sorted lists;
+
 3 - Find minimum value in a list;
+
 4 - Maximum sum sublist;
+
 5 - Print products of all elements;
 
-*let's go explorer this operations*
+*Let's go explorer this operations*

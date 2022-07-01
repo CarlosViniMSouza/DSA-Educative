@@ -46,3 +46,19 @@ class estructList:
 
 
 studyList = estructList()
+
+# Creating list01:
+
+# Creating list02:
+
+# Removing 1 element to list01:
+
+# Removing 1 element to list02:
+
+# Merge the 2 lists:
+
+# Find Minimun Value of lists:
+
+# Maximun Sum Sublists:
+
+# Product all elements of lists:
