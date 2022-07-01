@@ -21,7 +21,7 @@
    "explorer.confirmDragAndDrop": false,
    "extensions.ignoreRecommendations": true,
    "workbench.startupEditor": "none",
-   "workbench.colorTheme": "Dracula Soft",
+   "workbench.colorTheme": "GitHub Dark DimmedDimmed",
    "[python]": {
      "editor.defaultFormatter": "ms-python.python"
    },

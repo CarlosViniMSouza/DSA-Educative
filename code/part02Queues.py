@@ -17,11 +17,11 @@ class Dequeue:
     def removeElementRigth(self) -> None:
         self.data.pop()
 
-    def searchElement(self, newData) -> str:
-        for i in self.data:
-            if newData == i:
-                return f"Element Found: {newData}"
-            return "Element Not Found"
+    def searchElement(self, newData):
+        if newData in self.data:
+            print(f"Element Found: {newData}")
+        else:
+            print("Element Not Found")
 
     def reverseKElements(self, newData):
         # ex.: 1, 2, 3, 4, 5, 6, 7 (reverse 4 numbers):
@@ -70,3 +70,6 @@ deq.showDequeue()
 
 # applied the reverse K elements:
 deq.reverseKElements(3)  # problems!!
+
+# test of function searchElement:
+deq.searchElement(5)

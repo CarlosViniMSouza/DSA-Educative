@@ -1,4 +1,4 @@
 git add -A 
-git commit -m "vscode settings -> added"
+git commit -m "part02Queues.py -> finished"
 git push
 git status
