@@ -1,4 +1,4 @@
 git add -A 
-git commit -m "now? class & functions of Queue -> added"
+git commit -m "now: Resolve the problem with function reverse!"
 git push
 git status
