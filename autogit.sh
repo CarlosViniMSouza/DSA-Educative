@@ -1,4 +1,4 @@
 git add -A 
-git commit -m "now: searchElement"
+git commit -m "next step: Stack"
 git push
 git status
