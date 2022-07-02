@@ -1,4 +1,4 @@
 git add -A 
-git commit -m "part04LinkedList -> function addElement() -> ok"
+git commit -m "addElement() | showLinkedList() | sizeLinkedist() -> ok"
 git push
 git status
