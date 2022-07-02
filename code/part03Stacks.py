@@ -9,19 +9,28 @@ class Stack:
         self.data.insert(0, newData)
 
     def removeElement(self):
-        self.data.pop()
+        if self.data is not None:
+            self.data.pop()
+        else:
+            print("\nStack Empty! Add an element")
 
     def removeElementBelow(self):
-        self.data.pop(0)
+        if self.data is not None:
+            self.data.pop(0)
+        else:
+            print("\nStack Empty! Add an element")
 
     def searchElement(self, newData):
-        if newData == self.data:
-            print(f"Element found: {newData}")
+        if self.data is not None:
+            if newData in self.data:
+                print(f"\nElement Found: {newData}")
+            else:
+                print("\nElement Not Found")
         else:
-            print("Element Not Found")
+            print("\nStack Empty!!")
 
     def sizeStack(self):
-        print(f"The size is: {len(self.data)}")
+        print(f"\nThe size is: {len(self.data)}")
 
     def reverseKElements(self, newData):
         stackrev = []
@@ -36,14 +45,14 @@ class Stack:
 
         stackrev.reverse()
 
-        print("The new Stack:", stackrev + self.data)
+        print("\nThe new Stack:", stackrev + self.data)
 
     def showStack(self):
         for i in self.data:
-            print(i)
+            print(f"[{i}]")
 
     def showStackList(self):
-        print(self.data)
+        print(f"\n{self.data}")
 
 
 stack = Stack()
@@ -52,9 +61,11 @@ stack = Stack()
 stack.addElement(4)
 stack.addElement(3)
 stack.addElement(2)
+stack.addElement(1)
 stack.addElementBelow(5)
 stack.addElementBelow(6)
 stack.addElementBelow(7)
+stack.addElementBelow(8)
 
 # show stack:
 stack.showStack()
@@ -69,7 +80,7 @@ stack.showStack()
 print("\n")
 
 # searching 2 elements:
-stack.searchElement(5)
+stack.searchElement(4)
 stack.searchElement(10)
 
 # size stack:
