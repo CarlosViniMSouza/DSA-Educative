@@ -25,3 +25,27 @@ Linked lists can be singly or doubly linked depending if each node has just a si
 - *Merge K sorted linked lists*
 
 - *Find the intersection point* of two linked lists
+
+# Circular linked lists in Python
+
+The primary downside of the standard linked list is that you always have to start at the Head node.
+
+The circular linked list fixes this problem by replacing the Tail node’s `null` pointer with a pointer **back to the Head node**. When traversing, the program will follow pointers until it reaches the node it started on.
+
+The advantage of this setup is that you can start at any node and traverse the whole list. It also allows you to use linked lists as a loop-able structure by setting a desired number of cycles through the structure.
+
+Circular linked lists are great for processes that loop for a long time like CPU allocation in operating systems.
+
+## Applications:
+
+- Regularly looping solutions like CPU scheduling
+
+- Solutions where you want the freedom to start traversal at any node
+
+## Common circular linked list interview questions in Python
+
+- *Detect loop* in a linked lists
+
+- *Reverse* a circular linked list
+
+- *Reverse circular linked list in groups of give size*

@@ -1,4 +1,4 @@
 git add -A 
-git commit -m "part04LinkedList.py -> added"
+git commit -m "text of part04 - Circular Linked List -> added"
 git push
 git status
