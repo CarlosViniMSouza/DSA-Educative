@@ -1,4 +1,4 @@
 git add -A 
-git commit -m "text of part04 - Circular Linked List -> added"
+git commit -m "part04LinkedList -> function addElement() -> ok"
 git push
 git status
