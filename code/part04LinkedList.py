@@ -32,7 +32,22 @@ class LinkedList:
         lastData.nextData = node
 
     def removeElement(self, newData):
-        pass
+        dataDel = self.headData
+
+        if dataDel is not None:
+            if dataDel.data == newData:
+                self.headData = dataDel.nextData
+                dataDel = None
+                return 0
+
+        while dataDel is not None:
+            if dataDel.data == newData:
+                break
+            prevData = dataDel
+            dataDel = dataDel.nextData
+
+        if dataDel == None:
+            return 0
 
     def searchElement(self, newData):
         pass

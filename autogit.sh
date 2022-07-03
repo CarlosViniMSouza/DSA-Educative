@@ -1,4 +1,4 @@
 git add -A 
-git commit -m "addElement() | showLinkedList() | sizeLinkedist() -> ok"
+git commit -m "removeElement() -> working"
 git push
 git status
