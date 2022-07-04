@@ -58,19 +58,23 @@ class BinaryTree:
         print(self.data, end=" ")
 
     def searchElement(self, newData):
+        # if our BT is Empty
         if self.data is None:
             return False
 
+        # searching element in left subtree
         elif newData < self.data:
             if self.left is None:
                 return "Element Not Found"
             return self.left.searchElement(newData)
 
+        # searching element in right subtree
         elif newData > self.data:
             if self.right is None:
                 return "Element Not Found"
             return self.right.searchElement(newData)
 
+        # if newData is contained in BT
         else:
             return "Element Found"
 
@@ -97,6 +101,7 @@ print(end="\n")
 tree.showBTPostOrder()
 # output: 6 8 14 12 10
 
+# testing function search
 print("\n")
 print(tree.searchElement(6))
 print(tree.searchElement(12))
