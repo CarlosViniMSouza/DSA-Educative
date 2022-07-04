@@ -49,6 +49,17 @@ class LinkedList:
         if dataDel == None:
             return 0
 
+        prevData.nextData = dataDel.nextData
+        dataDel = None
+
+    # Utility function to print the linked LinkedList
+    def seeAllLinkedList(self):
+        value = self.headData
+
+        while value is not None:
+            print(value.data, end=" ")
+            value = value.nextData
+
     def searchElement(self, newData):
         pass
 
@@ -87,3 +98,10 @@ ll.showLinkedList()
 
 # check the size:
 ll.sizeLinkedList()
+
+# removing a element:
+ll.removeElement(1)
+ll.removeElement(8)
+
+# see the new list:
+ll.showLinkedList()
