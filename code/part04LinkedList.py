@@ -19,7 +19,7 @@ class LinkedList:
         # If our linked list is empty, the 1° element is the HEAD:
         if self.headData is None:
             self.headData = node
-            return 0
+            return True
 
         # lastData is very important:
         lastData = self.headData
@@ -37,20 +37,19 @@ class LinkedList:
         if dataDel is not None:
             if dataDel.data == newData:
                 self.headData = dataDel.nextData
-                dataDel = None
-                return 0
+                return True
 
         while dataDel is not None:
             if dataDel.data == newData:
                 break
+
             prevData = dataDel
             dataDel = dataDel.nextData
 
-        if dataDel == None:
-            return 0
+        if dataDel is None:
+            return True
 
         prevData.nextData = dataDel.nextData
-        dataDel = None
 
     # Utility function to print the linked LinkedList
     def seeAllLinkedList(self):
@@ -61,7 +60,14 @@ class LinkedList:
             value = value.nextData
 
     def searchElement(self, newData):
-        pass
+        node = self.headData
+
+        while node is not None:
+            if node.data == newData:
+                return "Element Found"
+            node = node.nextData
+
+        return "Element Not Found"
 
     def showLinkedList(self):
         node = self.headData
@@ -94,6 +100,7 @@ ll.addElementAtLast(5)
 ll.addElementAtLast(8)
 
 # show the linked list:
+print(end="\n")
 ll.showLinkedList()
 
 # check the size:
@@ -102,6 +109,12 @@ ll.sizeLinkedList()
 # removing a element:
 ll.removeElement(1)
 ll.removeElement(8)
+ll.removeElement(10)
 
 # see the new list:
+print(end="\n")
 ll.showLinkedList()
+
+# searching 2 elements:
+ll.searchElement(3)
+ll.searchElement(10)

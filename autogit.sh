@@ -1,8 +1,5 @@
 git add -A 
-git commit -m "removeElement() -> ok"
+git commit -m "searchElement() -> always finished"
 git push
 git status
-git add -A 
-git commit -m "removeElement() -> ok"
-git push
-git status
+
