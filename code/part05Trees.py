@@ -57,6 +57,23 @@ class BinaryTree:
 
         print(self.data, end=" ")
 
+    def searchElement(self, newData):
+        if self.data is None:
+            return False
+
+        elif newData < self.data:
+            if self.left is None:
+                return "Element Not Found"
+            return self.left.searchElement(newData)
+
+        elif newData > self.data:
+            if self.right is None:
+                return "Element Not Found"
+            return self.right.searchElement(newData)
+
+        else:
+            return "Element Found"
+
 
 tree = BinaryTree(10)
 
@@ -79,3 +96,17 @@ tree.showBTInOrder()
 print(end="\n")
 tree.showBTPostOrder()
 # output: 6 8 14 12 10
+
+print("\n")
+print(tree.searchElement(6))
+print(tree.searchElement(12))
+print(tree.searchElement(15))
+print(tree.searchElement(1))
+"""
+output:
+
+Element Found
+Element Found
+Element Not Found
+Element Not Found
+"""
