@@ -31,6 +31,18 @@ class BinaryTree:
         else:
             self.data = newData
 
+    def quantNodes(self) -> int:
+        if self.data is None:
+            return 0
+        else:
+            return 1 + quantNodes(self.left) + quantNodes(self.right)
+
+    def levelBinaryTree(self):
+        if self.data is None:
+            return 0
+        else:
+            return max(levelBinaryTree(self.left), levelBinaryTree(self.right))
+
     # defining nodes position
     def gotOxy(self, line, column):
         print(Padding(self.data, (line, column)))
@@ -110,12 +122,6 @@ class BinaryTree:
         else:
             return "Element Found"
 
-    def quantNodes(self):
-        if self.data is not None:
-            return 1 + self.left.quantNodes() + self.right.quantNodes()
-        else:
-            return 0
-
 
 tree = BinaryTree(10)
 
@@ -159,3 +165,6 @@ Element Not Found
 
 # checking size of tree:
 tree.quantNodes()
+
+# checking level tree:
+tree.levelBinaryTree()
