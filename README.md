@@ -14,9 +14,9 @@
 
 - Trees in Python
 
-- Graphs in Python
+- Graphs in Python (look more later)
 
-- Hash tables in Python
+- Hash tables in Python (look more later)
 
 ## What are data structures?
 
