@@ -47,7 +47,10 @@ class BinaryTree:
 
     # show only subtree (on right)
     def showSubTreeRight(self, column, line):
-        pass
+        gotOxy(self, column, line)
+        print(self.data)
+        showSubTreeRight(self.left, column - 10, line + 3)
+        showSubTreeRight(self.right, column + 10, line + 3)
 
     def gotOxy(self, column, line):
         pass
