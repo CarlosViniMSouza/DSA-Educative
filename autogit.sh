@@ -1,5 +1,5 @@
 git add -A 
-git commit -m "part06Graphs.py and part06.md -> done"
+git commit -m "part07Hash.py and part07.md -> done"
 git push
 git status
 

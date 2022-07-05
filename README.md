@@ -1,6 +1,6 @@
-### Here’s what we’ll cover today:
+# 8 Data Structures Commons in Python
 
-- What are data structures?
+## Content:
 
 - Arrays in Python
 
@@ -16,9 +16,9 @@
 
 - Graphs in Python
 
-- Hash tables in Python (look more later)
+- Hash tables in Python
 
-## What are data structures?
+## What are data structures (Introduction to the Topic)?
 
 Data structures are code structures for storing and organizing data that make it easier to modify, navigate, and access information. Data structures determine how data is collected, the functionality we can implement, and the relationships between data.
 
