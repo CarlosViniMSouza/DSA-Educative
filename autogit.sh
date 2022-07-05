@@ -1,5 +1,5 @@
 git add -A 
-git commit -m "part05Trees.py: showAllBinaryTree() -> stop for interval"
+git commit -m "part05Trees.py: quantNodes() -> more problems ... 😒"
 git push
 git status
 

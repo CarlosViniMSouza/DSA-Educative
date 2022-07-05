@@ -110,6 +110,12 @@ class BinaryTree:
         else:
             return "Element Found"
 
+    def quantNodes(self):
+        if self.data is not None:
+            return 1 + self.left.quantNodes() + self.right.quantNodes()
+        else:
+            return 0
+
 
 tree = BinaryTree(10)
 
@@ -149,4 +155,7 @@ Element Not Found
 """
 
 # show the binary tree
-tree.showAllBinaryTree()
+# showAllBinaryTree() -> it's not ok
+
+# checking size of tree:
+tree.quantNodes()
