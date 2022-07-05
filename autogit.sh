@@ -1,5 +1,5 @@
 git add -A 
-git commit -m "part05Trees.py: add comments in searchElement()"
+git commit -m "part05Trees.py: showAllBinaryTree() -> created"
 git push
 git status
 

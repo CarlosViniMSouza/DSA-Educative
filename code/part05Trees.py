@@ -1,3 +1,7 @@
+from rich import print
+from rich.padding import Padding
+
+
 class BinaryTree:
     def __init__(self, data):
         self.left = None
@@ -26,6 +30,24 @@ class BinaryTree:
         # will be the node root!
         else:
             self.data = newData
+
+    # show our binary tree complete
+    def showAllBinaryTree(self, column, line):
+        gotOxy(self, column, line)
+        print(self.data)
+        showSubTreeLeft(self.left, (column - (column / 2)), line + 3)
+        showSubTreeRight(self.right, (column + (column / 2)), line + 3)
+
+    # show only subtree (on left)
+    def showSubTreeLeft(self, column, line):
+        pass
+
+    # show only subtree (on right)
+    def showSubTreeRight(self, column, line):
+        pass
+
+    def gotOxy(self, column, line):
+        pass
 
     # Display Order: root -> subtree right -> subtree left
     def showBTPreOrder(self):
