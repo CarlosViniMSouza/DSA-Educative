@@ -31,32 +31,33 @@ class BinaryTree:
         else:
             self.data = newData
 
+    # defining nodes position
+    def gotOxy(self, line, column):
+        print(Padding(self.data, (line, column)))
+
     # show our binary tree complete
     def showAllBinaryTree(self):
         if self.data is not None:
             line, column = 60, 2
-            # node = Padding(self.data, (60, 2))
-            print(Padding(self.data, (line, column)))
-            self.left.showSubtreeLeft(self.data, line=line + 3, column=(column - (column / 2)))
-            self.right.showSubtreeRight(self.data, line=line + 3, column=(column + (column / 2)))
+            print(Padding(self.data, (60, 2)))
+            self.left.showSubtreeLeft(self.data, line + 3, (column - (column / 2)))
+            self.right.showSubtreeRight(self.data, line + 3, (column + (column / 2)))
         else:
             print("Binary Tree Empty", (50, 5))
 
     def showSubtreeLeft(self, line: int, column: int):
         if self.data is not None:
-            # line, column = 50, 3
-            # node = Padding(self.data, (50, 3))
-            print(Padding(self.data, (line, column)))
-            self.left.showSubtreeLeft(self.data, line=line + 3, column=column - 10)
-            self.right.showSubtreeLeft(self.data, line=line + 3, column=column + 10)
+            print(Padding(self.data, (50, 3)))
+            # gotOxy(50, 3)
+            self.left.showSubtreeLeft(self.data, line + 3, column - 10)
+            self.right.showSubtreeLeft(self.data, line + 3, column + 10)
 
     def showSubtreeRight(self, line: int, column: int):
         if self.data is not None:
-            # line, column = 70, 3
-            # node = Padding(self.data, (70, 3))
-            print(Padding(self.data, (line, column)))
-            self.left.showSubtreeRight(self.data, line=line + 3, column=column - 10)
-            self.right.showSubtreeRight(self.data, line=line + 3, column=column + 10)
+            print(Padding(self.data, (70, 3)))
+            # gotOxy(70, 3)
+            self.left.showSubtreeRight(self.data, line + 3, column - 10)
+            self.right.showSubtreeRight(self.data, line + 3, column + 10)
 
     # Display Order: root -> subtree right -> subtree left
     def showBTPreOrder(self):
