@@ -3,7 +3,7 @@ from rich.padding import Padding
 
 
 class BinaryTree:
-    def __init__(self, data):
+    def __init__(self, data=None):
         self.left = None
         self.right = None
         self.data = data
@@ -32,28 +32,28 @@ class BinaryTree:
             self.data = newData
 
     # show our binary tree complete
-    def showAllBinaryTree(self, column, line):
-        gotOxy(self, column, line)
-        print(self.data)
-        showSubTreeLeft(self.left, (column - (column / 2)), line + 3)
-        showSubTreeRight(self.right, (column + (column / 2)), line + 3)
+    def showAllBinaryTree(self, line: int, column: int):
+        if self.data is not None:
+            # point = Padding(self.data, (line, column))
+            print(Padding(self.data, (line, column)))
+            showSubTreeLeft(self.left, line + 3, (column - (column / 2)))
+            showSubTreeRight(self.right, line + 3, (column + (column / 2)))
+        else:
+            print(Padding("Tree Empty!", (5, 50)))
 
     # show only subtree (on left)
-    def showSubTreeLeft(self, column, line):
-        gotOxy(self, column, line)
-        print(self.data)
-        showSubTreeLeft(self.left, column - 10, line + 3)
-        showSubTreeLeft(self.right, column + 10, line + 3)
+    def showSubTreeLeft(self, line: int, column: int):
+        if self.data is not None:
+            print(Padding(self.data, (line, column)))
+            showSubTreeLeft(self.left, line + 3, column - 10)
+            showSubTreeLeft(self.right, line + 3, column + 10)
 
     # show only subtree (on right)
-    def showSubTreeRight(self, column, line):
-        gotOxy(self, column, line)
-        print(self.data)
-        showSubTreeRight(self.left, column - 10, line + 3)
-        showSubTreeRight(self.right, column + 10, line + 3)
-
-    def gotOxy(self, column, line):
-        pass
+    def showSubTreeRight(self, line: int, column: int):
+        if self.data is not None:
+            print(Padding(self.data, (line, column)))
+            showSubTreeRight(self.left, line + 3, column - 10)
+            showSubTreeRight(self.right, line + 3, column + 10)
 
     # Display Order: root -> subtree right -> subtree left
     def showBTPreOrder(self):
@@ -143,3 +143,6 @@ Element Found
 Element Not Found
 Element Not Found
 """
+
+# show the binary tree
+tree.showAllBinaryTree(60, 2)
