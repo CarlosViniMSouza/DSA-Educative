@@ -1,5 +1,6 @@
 from rich import print
 from rich.padding import Padding
+from visualize import *
 
 
 class BinaryTree:
@@ -32,28 +33,9 @@ class BinaryTree:
             self.data = newData
 
     # show our binary tree complete
-    def showAllBinaryTree(self, line: int, column: int):
-        if self.data is not None:
-            # point = Padding(self.data, (line, column))
-            print(Padding(self.data, (line, column)))
-            showSubTreeLeft(self.left, line + 3, (column - (column / 2)))
-            showSubTreeRight(self.right, line + 3, (column + (column / 2)))
-        else:
-            print(Padding("Tree Empty!", (5, 50)))
-
-    # show only subtree (on left)
-    def showSubTreeLeft(self, line: int, column: int):
-        if self.data is not None:
-            print(Padding(self.data, (line, column)))
-            showSubTreeLeft(self.left, line + 3, column - 10)
-            showSubTreeLeft(self.right, line + 3, column + 10)
-
-    # show only subtree (on right)
-    def showSubTreeRight(self, line: int, column: int):
-        if self.data is not None:
-            print(Padding(self.data, (line, column)))
-            showSubTreeRight(self.left, line + 3, column - 10)
-            showSubTreeRight(self.right, line + 3, column + 10)
+    @staticmethod
+    def showAllBinaryTree(self):
+        return display()
 
     # Display Order: root -> subtree right -> subtree left
     def showBTPreOrder(self):
@@ -145,4 +127,4 @@ Element Not Found
 """
 
 # show the binary tree
-tree.showAllBinaryTree(60, 2)
+tree.showAllBinaryTree()
