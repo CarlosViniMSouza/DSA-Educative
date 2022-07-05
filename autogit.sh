@@ -1,5 +1,5 @@
 git add -A 
-git commit -m "part05Trees.py: README and settings.json -> alts add"
+git commit -m "part06Graphs.py and part06.md -> done"
 git push
 git status
 

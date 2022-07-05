@@ -151,14 +151,6 @@ print(tree.searchElement(6))
 print(tree.searchElement(12))
 print(tree.searchElement(15))
 print(tree.searchElement(1))
-"""
-output:
-
-Element Found
-Element Found
-Element Not Found
-Element Not Found
-"""
 
 # show the binary tree
 # showAllBinaryTree() -> it's not ok

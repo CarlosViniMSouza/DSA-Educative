@@ -14,7 +14,7 @@
 
 - Trees in Python
 
-- Graphs in Python (look more later)
+- Graphs in Python
 
 - Hash tables in Python (look more later)
 
